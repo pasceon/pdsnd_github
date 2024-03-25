@@ -199,6 +199,18 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def raw_data_desplay(df):
+    idx = 0
+    while True:
+        raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n').lower()
+        if raw_data != 'no' and raw_data != 'yes':
+            print('Invalid input, please enter yes or no')
+            continue
+        if raw_data != 'no' and idx <= len(df):
+            print(df.iloc[idx:idx + 5])
+            idx += 5
+        else:
+            break
 
 def main():
     while True:
@@ -223,17 +235,8 @@ def main():
         except KeyError:
             print('Some user statistics could not be calculated due to missing data')
 
-        idx = 0
-        while True:
-            raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n').lower()
-            if raw_data != 'no' and raw_data != 'yes':
-                print('Invalid input, please enter yes or no')
-                continue
-            if raw_data != 'no' and idx <= len(df):
-                print(df.iloc[idx:idx+5])
-                idx +=5
-            else:
-                break
+        raw_data_desplay(df)
+
 
         while True:
             restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
