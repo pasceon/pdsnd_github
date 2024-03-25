@@ -30,5 +30,6 @@ The data were obtained by [Motivate] (https://motivateco.com/).
 
 ### Credits
 
+The code development was inspired by the the code provided in Udacity's bikesharing repo.
 
 
