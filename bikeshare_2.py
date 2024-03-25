@@ -225,15 +225,25 @@ def main():
 
         idx = 0
         while True:
-            raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
-            if raw_data.lower() != 'no' and idx <= len(df):
+            raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n').lower()
+            if raw_data != 'no' and raw_data != 'yes':
+                print('Invalid input, please enter yes or no')
+                continue
+            if raw_data != 'no' and idx <= len(df):
                 print(df.iloc[idx:idx+5])
                 idx +=5
             else:
                 break
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        while True:
+            restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+            if restart != 'yes' and restart != 'no':
+                    print('Invalid input, please enter yes or no')
+                    continue
+            else:
+                break
+
+        if restart != 'yes':
             break
 
 
