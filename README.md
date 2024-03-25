@@ -26,6 +26,9 @@ The data files used are:
 *new_york_city.csv
 *washington.csv
 
+The data were obtained by [Motivate] (https://motivateco.com/).
+
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
+
 
