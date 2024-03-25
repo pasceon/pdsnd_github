@@ -31,6 +31,10 @@ The data files used are:
 
 The data were obtained by [Motivate](https://motivateco.com/).
 
+### Requirements
+
+All requirements for the code implementation are included in the _requirements.txt_ file.
+
 ### Credits
 
 The code development was inspired by the the code provided in Udacity's bikesharing repo.
